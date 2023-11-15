@@ -35,24 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function processUserMessage(message) {
         // Lista de palabras clave y respuestas específicas
         const keywords = {
-            "hola": "¡Hola! ¿Cómo estás?",
-            "ingeniería": "La ingeniería es una disciplina que aplica principios científicos y matemáticos para resolver problemas y diseñar soluciones.",
-            // ... Otras palabras clave y respuestas aquí
-        };
-
-        // Busca si el mensaje del usuario contiene una palabra clave y proporciona la respuesta correspondiente
-        for (const keyword in keywords) {
-            if (message.toLowerCase().includes(keyword)) {
-                appendBotMessage(keywords[keyword]);
-                return; // Detiene la búsqueda después de encontrar una coincidencia
-            }
-        }
-
-        // Respuesta genérica si no se encuentra una palabra clave.
-        appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
-    }
-});
-
+           "hola":"hola cómo estás?",
+          "bien":"comencemos con las preguntas",
           "ingeniería": "La ingeniería es una disciplina que aplica principios científicos y matemáticos para resolver problemas y diseñar soluciones.",
             "especialidades": "Existen muchas especialidades en ingeniería, como civil, industrial, informática, geología, minería y más.",
             "civil": "La ingeniería civil se enfoca en la planificación y diseño de proyectos de construcción, como carreteras, puentes y edificios.",
@@ -115,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "ingeniería de minas": "La ingeniería de minas se dedica a la extracción y procesamiento de minerales y recursos naturales.",
             "ingeniería nuclear": "La ingeniería nuclear se ocupa de la energía nuclear y sus aplicaciones en medicina e industria.",
             "ingeniería petrolera": "La ingeniería petrolera se enfoca en la exploración y producción de petróleo y gas natural."
-        
-};
+
+        };
 
         // Busca si el mensaje del usuario contiene una palabra clave y proporciona la respuesta correspondiente
         for (const keyword in keywords) {
