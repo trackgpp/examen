@@ -21,51 +21,15 @@
             <div id="chat-box" class="chat-container">
                 <!-- Aquí aparecerán los mensajes del chat bot -->
             </div>
+            <div class="user-input-container">
+                <input type="text" id="user-input" class="user-input" placeholder="Escribe tu mensaje...">
+                <button id="send-button" class="send-button">Enviar</button>
+            </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Coloca aquí las keywords y respuestas para el chat bot
-            const keywords = {
-                "hola": "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?",
-                // ... (agrega las demás keywords)
-            };
-
-            const chatBox = document.getElementById('chat-box');
-
-            // Función para mostrar mensajes del bot
-            function appendBotMessage(message) {
-                const botMessage = document.createElement('div');
-                botMessage.classList.add('chat-message', 'bot');
-                botMessage.textContent = message;
-                chatBox.appendChild(botMessage);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-
-            // Función para procesar mensajes del usuario
-            function processUserMessage(message) {
-                // Busca si el mensaje del usuario contiene una palabra clave y proporciona la respuesta correspondiente
-                for (const keyword in keywords) {
-                    if (message.toLowerCase().includes(keyword)) {
-                        appendBotMessage(keywords[keyword]);
-                        return; // Detiene la búsqueda después de encontrar una coincidencia
-                    }
-                }
-
-                // Respuesta genérica si no se encuentra una palabra clave.
-                appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
-            }
-
-            // Diálogo de bienvenida
-            const welcomeMessage = "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?";
-            appendBotMessage(welcomeMessage);
-
-            // Cuestionario
-            const quizContainer = document.querySelector('.quiz-container');
-            quizContainer.style.display = 'block'; // Mostrar el cuestionario automáticamente
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
