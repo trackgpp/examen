@@ -5,99 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocatech</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .activity-container {
-            background-color: #3498db;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            max-width: 100%;
-            margin: 20px 0;
-            padding: 10px;
-            color: #fff;
-        }
-
-        .chat-container,
-        .video-container,
-        .quiz-container {
-            margin: 20px 0;
-        }
-
-        .video-container iframe {
-            width: 100%;
-            height: 315px;
-        }
-
-        /* Estilo adicional para el formulario */
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .quiz-input {
-            margin-top: 10px;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #fff;
-            width: 80%;
-        }
-
-        .submit-button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #3498db;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <div class="activity-container chat-container" id="chat-box">
-            <div class="activity-title welcome-message">Vocatech: el lugar para responder tus dudas vocacionales.</div>
-            <!-- Contenido del chatbot -->
-            <div class="chat-message bot">¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?</div>
+        <div class="header">
+            <h1>Vocatech</h1>
+            <p>El lugar para responder tus dudas vocacionales</p>
         </div>
 
-        <div class="activity-container video-container">
-            <div class="activity-title">Video</div>
-            <!-- Reemplaza la URL del video con tu propio enlace de YouTube -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TUeOeBUtP4Y" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <div class="activity-container">
+            <div class="chat-container">
+                <div id="chat-box"></div>
+                <div class="user-input-container">
+                    <input type="text" id="user-input" class="user-input" placeholder="Escribe aquí...">
+                    <button id="send-button" class="send-button">Enviar</button>
+                </div>
+            </div>
 
-        <div class="activity-container quiz-container">
-            <div class="activity-title">Cuestionario</div>
-            <!-- Formulario para el cuestionario -->
-            <form action="#" method="post" id="quiz-form">
-                <label for="quiz-input" style="color: #fff;">Responde nuestro cuestionario:</label>
-                <input type="text" id="quiz-input" class="quiz-input" placeholder="Ingresa tu respuesta">
-                <button type="button" class="submit-button" onclick="submitQuiz()">Enviar</button>
-            </form>
-            <div id="quiz-response" style="color: #fff; margin-top: 10px;"></div>
+            <div class="video-container">
+                <!-- Agrega el iframe del video con el URL -->
+                <iframe width="560" height="315" src="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/ivideo/index.html?AWSAccessKeyId=ASIA2GDJ2GMFUXVXZMQ7&Expires=1700082038&Signature=a%2BktTXbrt5ov%2BEvTmn8Cpa6PYHs%3D&X-Amzn-Trace-Id=Root%3D1-65552366-143747765bece3cd3eddd698%3BParent%3D365b280549997cb7%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDQaCWV1LXdlc3QtMSJHMEUCIGdOoXvrLByRqCPJuUS8CevIvHgjwDHFi40WEBTYztRuAiEAnfD18ERRd6%2BfRXPmdzplFJQKE%2FfmWlZuo539PGV39jEqiAMIfRABGgw3MDAzMDE1ODcyMTEiDDpcYESXe082Mq%2FmoCrlAqVgcWnxp1WyC4%2Bl3KJU4tFpHebpLDxOvbkYseBGltNaQSmp7Jb46bBG9uoRmdf%2FrzxYZA0OPELJsSmdpvXwZ%2BsTxAcV%2BT0Dph4MRjUSduJmaU%2FAY4CPRgmife7nL2qAcGxMYFgbjIZ55oHZ%2FpixcxBIbHy9VO%2FjGoYRYYhHdy1s56YcdNjp5kbIA1QPL2dx3%2Bwhjyp%2B%2BuAh7KF3dI%2BJjBdTN%2FIoOnWAi0Dak0%2Bwt0R7u4y8OsO0yTDcBnaAuL8xxpppmH3sRNonVQCA%2F3JvbqqKD9MP5GEjJGPAWCcXCpwBiydE6CK5aozSrvCBjv5ipeuf40NCMde0dnQQFbFkP%2BZTQiNiF1duqNb5cGnlUKAMrnxgSSz1uXrfVHLCdI8aZdOR7%2FNbIav3X%2BIu3pDsxaL5a%2F6TVzDH3uHejmGhaxSDhJCzFJYn%2BWWRXPkK%2BGIp7vyibh1B9bK%2BUTuCsAd21tlcVmEqPDCiw9SqBjqeAfLFasnXK%2Bik4Kw9uPM2bTWSl3ebSEcpKktCfAUeqFNaregRpPyEs%2BXQxJI36iNm3xSTh9X1WkLepp4dEjAlshbal5yjJWVC7HvXZ316%2Burn4WyC0Y0LAvEWa1sRq9cPOEG2RG29zImhysG8SixIBJt4bBv1%2FcQQWQZfv3%2B%2BNXTROmifbB%2BTUuq4nb%2B22kb9LSIR2%2B0%2BXqwvuvHf%2FyeF&source=nolej" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="quiz-container">
+                <!-- Agrega el enlace al cuestionario con el URL -->
+                <a href="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/grade/index.html?AWSAccessKeyId=ASIA2GDJ2GMFUXVXZMQ7&Expires=1700082040&Signature=nypVGwt0kNrwoiBF%2Fa%2FLuiIW7GE%3D&X-Amzn-Trace-Id=Root%3D1-65552368-2c485ed01e92ad981483b7f5%3BParent%3D1aaf2f91790dc095%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDQaCWV1LXdlc3QtMSJHMEUCIGdOoXvrLByRqCPJuUS8CevIvHgjwDHFi40WEBTYztRuAiEAnfD18ERRd6%2BfRXPmdzplFJQKE%2FfmWlZuo539PGV39jEqiAMIfRABGgw3MDAzMDE1ODcyMTEiDDpcYESXe082Mq%2FmoCrlAqVgcWnxp1WyC4%2Bl3KJU4tFpHebpLDxOvbkYseBGltNaQSmp7Jb46bBG9uoRmdf%2FrzxYZA0OPELJsSmdpvXwZ%2BsTxAcV%2BT0Dph4MRjUSduJmaU%2FAY4CPRgmife7nL2qAcGxMYFgbjIZ55oHZ%2FpixcxBIbHy9VO%2FjGoYRYYhHdy1s56YcdNjp5kbIA1QPL2dx3%2Bwhjyp%2B%2BuAh7KF3dI%2BJjBdTN%2FIoOnWAi0Dak0%2Bwt0R7u4y8OsO0yTDcBnaAuL8xxpppmH3sRNonVQCA%2F3JvbqqKD9MP5GEjJGPAWCcXCpwBiydE6CK5aozSrvCBjv5ipeuf40NCMde0dnQQFbFkP%2BZTQiNiF1duqNb5cGnlUKAMrnxgSSz1uXrfVHLCdI8aZdOR7%2FNbIav3X%2BIu3pDsxaL5a%2F6TVzDH3uHejmGhaxSDhJCzFJYn%2BWWRXPkK%2BGIp7vyibh1B9bK%2BUTuCsAd21tlcVmEqPDCiw9SqBjqeAfLFasnXK%2Bik4Kw9uPM2bTWSl3ebSEcpKktCfAUeqFNaregRpPyEs%2BXQxJI36iNm3xSTh9X1WkLepp4dEjAlshbal5yjJWVC7HvXZ316%2Burn4WyC0Y0LAvEWa1sRq9cPOEG2RG29zImhysG8SixIBJt4bBv1%2FcQQWQZfv3%2B%2BNXTROmifbB%2BTUuq4nb%2B22kb9LSIR2%2B0%2BXqwvuvHf%2FyeF&source=nolej">Ir al cuestionario</a>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
