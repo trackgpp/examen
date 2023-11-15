@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocatech</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Vocatech</h1>
-            <p>El lugar para responder tus dudas vocacionales</p>
-        </div>
-
-        <div class="video-container">
-            <h2>Video</h2>
-            <!-- Ingrese el URL del video en el atributo src -->
-            <iframe width="560" height="315" src="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/ivideo/index.html?AWSAccessKeyId=ASIA2GDJ2GMFUXVXZMQ7&Expires=1700082038&Signature=a%2BktTXbrt5ov%2BEvTmn8Cpa6PYHs%3D&X-Amzn-Trace-Id=Root%3D1-65552366-143747765bece3cd3eddd698%3BParent%3D365b280549997cb7%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDQaCWV1LXdlc3QtMSJHMEUCIGdOoXvrLByRqCPJuUS8CevIvHgjwDHFi40WEBTYztRuAiEAnfD18ERRd6%2BfRXPmdzplFJQKE%2FfmWlZuo539PGV39jEqiAMIfRABGgw3MDAzMDE1ODcyMTEiDDpcYESXe082Mq%2FmoCrlAqVgcWnxp1WyC4%2Bl3KJU4tFpHebpLDxOvbkYseBGltNaQSmp7Jb46bBG9uoRmdf%2FrzxYZA0OPELJsSmdpvXwZ%2BsTxAcV%2BT0Dph4MRjUSduJmaU%2FAY4CPRgmife7nL2qAcGxMYFgbjIZ55oHZ%2FpixcxBIbHy9VO%2FjGoYRYYhHdy1s56YcdNjp5kbIA1QPL2dx3%2Bwhjyp%2B%2BuAh7KF3dI%2BJjBdTN%2FIoOnWAi0Dak0%2Bwt0R7u4y8OsO0yTDcBnaAuL8xxpppmH3sRNonVQCA%2F3JvbqqKD9MP5GEjJGPAWCcXCpwBiydE6CK5aozSrvCBjv5ipeuf40NCMde0dnQQFbFkP%2BZTQiNiF1duqNb5cGnlUKAMrnxgSSz1uXrfVHLCdI8aZdOR7%2FNbIav3X%2BIu3pDsxaL5a%2F6TVzDH3uHejmGhaxSDhJCzFJYn%2BWWRXPkK%2BGIp7vyibh1B9bK%2BUTuCsAd21tlcVmEqPDCiw9SqBjqeAfLFasnXK%2Bik4Kw9uPM2bTWSl3ebSEcpKktCfAUeqFNaregRpPyEs%2BXQxJI36iNm3xSTh9X1WkLepp4dEjAlshbal5yjJWVC7HvXZ316%2Burn4WyC0Y0LAvEWa1sRq9cPOEG2RG29zImhysG8SixIBJt4bBv1%2FcQQWQZfv3%2B%2BNXTROmifbB%2BTUuq4nb%2B22kb9LSIR2%2B0%2BXqwvuvHf%2FyeF&source=nolej" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="quiz-container">
-            <h2>Cuestionario</h2>
-            <label for="quiz-url">Ingrese el URL del cuestionario:</label>
-            <input type="text" id="quiz-url" placeholder="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/grade/index.html?AWSAccessKeyId=ASIA2GDJ2GMFUXVXZMQ7&Expires=1700082040&Signature=nypVGwt0kNrwoiBF%2Fa%2FLuiIW7GE%3D&X-Amzn-Trace-Id=Root%3D1-65552368-2c485ed01e92ad981483b7f5%3BParent%3D1aaf2f91790dc095%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDQaCWV1LXdlc3QtMSJHMEUCIGdOoXvrLByRqCPJuUS8CevIvHgjwDHFi40WEBTYztRuAiEAnfD18ERRd6%2BfRXPmdzplFJQKE%2FfmWlZuo539PGV39jEqiAMIfRABGgw3MDAzMDE1ODcyMTEiDDpcYESXe082Mq%2FmoCrlAqVgcWnxp1WyC4%2Bl3KJU4tFpHebpLDxOvbkYseBGltNaQSmp7Jb46bBG9uoRmdf%2FrzxYZA0OPELJsSmdpvXwZ%2BsTxAcV%2BT0Dph4MRjUSduJmaU%2FAY4CPRgmife7nL2qAcGxMYFgbjIZ55oHZ%2FpixcxBIbHy9VO%2FjGoYRYYhHdy1s56YcdNjp5kbIA1QPL2dx3%2Bwhjyp%2B%2BuAh7KF3dI%2BJjBdTN%2FIoOnWAi0Dak0%2Bwt0R7u4y8OsO0yTDcBnaAuL8xxpppmH3sRNonVQCA%2F3JvbqqKD9MP5GEjJGPAWCcXCpwBiydE6CK5aozSrvCBjv5ipeuf40NCMde0dnQQFbFkP%2BZTQiNiF1duqNb5cGnlUKAMrnxgSSz1uXrfVHLCdI8aZdOR7%2FNbIav3X%2BIu3pDsxaL5a%2F6TVzDH3uHejmGhaxSDhJCzFJYn%2BWWRXPkK%2BGIp7vyibh1B9bK%2BUTuCsAd21tlcVmEqPDCiw9SqBjqeAfLFasnXK%2Bik4Kw9uPM2bTWSl3ebSEcpKktCfAUeqFNaregRpPyEs%2BXQxJI36iNm3xSTh9X1WkLepp4dEjAlshbal5yjJWVC7HvXZ316%2Burn4WyC0Y0LAvEWa1sRq9cPOEG2RG29zImhysG8SixIBJt4bBv1%2FcQQWQZfv3%2B%2BNXTROmifbB%2BTUuq4nb%2B22kb9LSIR2%2B0%2BXqwvuvHf%2FyeF&source=nolej">
-            <button onclick="openQuiz()">Abrir Cuestionario</button>
-        </div>
-
-        <div class="chat-container">
-            <h2>Chatbot</h2>
-            <div id="chat-box"></div>
-            <div class="user-input-container">
-                <input type="text" id="user-input" class="user-input" placeholder="Escribe tu mensaje...">
-                <button id="send-button" class="send-button">Enviar</button>
+        <h1>Vocatech: el lugar para responder tus dudas vocacionales</h1>
+        <div class="activity-container">
+            <div class="video-container">
+                <!-- Aquí puedes ingresar el URL del video -->
+                <iframe width="560" height="315" src="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/ivideo/index.html?AWSAccessKeyId=ASIA2GDJ2GMFY7PVXR5F&Expires=1700089991&Signature=qYEUppyi8fR3YFh6zxwik%2BSueNc%3D&X-Amzn-Trace-Id=Root%3D1-65554277-01735f423914ed764fa046a0%3BParent%3D2d1161aa481bd260%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDYaCWV1LXdlc3QtMSJHMEUCIQDYafprhVFckS5gFrCocFAS09NutdWdx14QQNgcp8GG0wIgDuBm9KT2V0DPN65sQCHQogwlHqTocEyRH7vTWfA%2FobIqiAMIfxABGgw3MDAzMDE1ODcyMTEiDJcBbhTLEOYPjOVc%2FSrlAuJvwSrGfjJBwbeeT90BtM4H1KbHTdH9uzR1XOdgYh3f2CqxrfU54QD9rUC65TRp8CXynyDsS4rjBrg7s5p%2BHqcMvA2YtlkG0OCa%2FYR3ZCVaCFD7LwmxhVU8dS3OOu%2BxL8lO5sjefgfe0AF8DwRRfBA1WeJIRWd%2BAdQoMn7e8hVP%2FblaUs6LHZAwXizjfDTRehEP6AokO59l7fytn23Di%2Fm1uGgTTre%2FlHgEQ85Qpnpv4sKaTNMWDxYP94PmOWOWzpI3HCNwtVyH4mhPUEepwgbCFrTIZuz49f6Yk0eQdBf8rWuWbuX78zBPopLBaBba0hp%2Brp5foWBqNoDZJXNqM71voZnmMHJ5gIA0GB0KdvAc5BGGU246SB2uIFjrYq1gcFyR%2BlUY3ZmHKujGHnQAiKKFZkBNb%2F0JGrxhoO%2BUwudcRy85j4AX4To9R92NxGZMm1wWSBKHbPFmrYIq7Eh6FmjL5xH5lTCA%2BtSqBjqeAdqxS5k9Qd09Rsov6cNDCQCHzwgkwHy01s94GRpk2VqUv%2FGhsJnE8q%2F2pwKni0kRIKJFaMaujl9B20s3yQWyB3NdCFkj%2F3KkvMKAax%2BdsPJDZ2N5UfT29VJhDfDyt8PiRlPF6ofjWWGIju68XPzXMnNyO6NqZDTDmaH685CtYBLkWmAki64nYo8S4nMrQJiWOPXn5q5gkgyacz2jf1Fa&source=nolej" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="quiz-container">
+                <!-- Aquí puedes ingresar el URL del cuestionario -->
+                <iframe src="https://nolej-data162907-live.s3.eu-west-1.amazonaws.com/documents/633e6da2-5d83-47bd-b283-2deb988d529b/previews/grade/index.html?AWSAccessKeyId=ASIA2GDJ2GMFUXVXZMQ7&Expires=1700082040&Signature=nypVGwt0kNrwoiBF%2Fa%2FLuiIW7GE%3D&X-Amzn-Trace-Id=Root%3D1-65552368-2c485ed01e92ad981483b7f5%3BParent%3D1aaf2f91790dc095%3BSampled%3D0%3BLineage%3D8e2a1476%3A0&x-amz-security-token=IQoJb3JpZ2luX2VjEDQaCWV1LXdlc3QtMSJHMEUCIGdOoXvrLByRqCPJuUS8CevIvHgjwDHFi40WEBTYztRuAiEAnfD18ERRd6%2BfRXPmdzplFJQKE%2FfmWlZuo539PGV39jEqiAMIfRABGgw3MDAzMDE1ODcyMTEiDDpcYESXe082Mq%2FmoCrlAqVgcWnxp1WyC4%2Bl3KJU4tFpHebpLDxOvbkYseBGltNaQSmp7Jb46bBG9uoRmdf%2FrzxYZA0OPELJsSmdpvXwZ%2BsTxAcV%2BT0Dph4MRjUSduJmaU%2FAY4CPRgmife7nL2qAcGxMYFgbjIZ55oHZ%2FpixcxBIbHy9VO%2FjGoYRYYhHdy1s56YcdNjp5kbIA1QPL2dx3%2Bwhjyp%2B%2BuAh7KF3dI%2BJjBdTN%2FIoOnWAi0Dak0%2Bwt0R7u4y8OsO0yTDcBnaAuL8xxpppmH3sRNonVQCA%2F3JvbqqKD9MP5GEjJGPAWCcXCpwBiydE6CK5aozSrvCBjv5ipeuf40NCMde0dnQQFbFkP%2BZTQiNiF1duqNb5cGnlUKAMrnxgSSz1uXrfVHLCdI8aZdOR7%2FNbIav3X%2BIu3pDsxaL5a%2F6TVzDH3uHejmGhaxSDhJCzFJYn%2BWWRXPkK%2BGIp7vyibh1B9bK%2BUTuCsAd21tlcVmEqPDCiw9SqBjqeAfLFasnXK%2Bik4Kw9uPM2bTWSl3ebSEcpKktCfAUeqFNaregRpPyEs%2BXQxJI36iNm3xSTh9X1WkLepp4dEjAlshbal5yjJWVC7HvXZ316%2Burn4WyC0Y0LAvEWa1sRq9cPOEG2RG29zImhysG8SixIBJt4bBv1%2FcQQWQZfv3%2B%2BNXTROmifbB%2BTUuq4nb%2B22kb9LSIR2%2B0%2BXqwvuvHf%2FyeF&source=nolej" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+            <div id="chat-box" class="chat-container">
+                <!-- Aquí aparecerán los mensajes del chat bot -->
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Coloca aquí las keywords y respuestas para el chat bot
+            const keywords = {
+                "hola": "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?",
+                // ... (agrega las demás keywords)
+            };
 
+            const chatBox = document.getElementById('chat-box');
+
+            // Función para mostrar mensajes del bot
+            function appendBotMessage(message) {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('chat-message', 'bot');
+                botMessage.textContent = message;
+                chatBox.appendChild(botMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+
+            // Función para procesar mensajes del usuario
+            function processUserMessage(message) {
+                // Busca si el mensaje del usuario contiene una palabra clave y proporciona la respuesta correspondiente
+                for (const keyword in keywords) {
+                    if (message.toLowerCase().includes(keyword)) {
+                        appendBotMessage(keywords[keyword]);
+                        return; // Detiene la búsqueda después de encontrar una coincidencia
+                    }
+                }
+
+                // Respuesta genérica si no se encuentra una palabra clave.
+                appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
+            }
+
+            // Diálogo de bienvenida
+            const welcomeMessage = "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?";
+            appendBotMessage(welcomeMessage);
+
+            // Cuestionario
+            const quizContainer = document.querySelector('.quiz-container');
+            quizContainer.style.display = 'block'; // Mostrar el cuestionario automáticamente
+        });
+    </script>
+</body>
 </html>
+
