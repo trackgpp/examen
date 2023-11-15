@@ -1,43 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const chatBox = document.getElementById('chat-box');
-    const userInput = document.getElementById('user-input');
-    const sendButton = document.getElementById('send-button');
-    const quizUrlInput = document.getElementById('quiz-url');
-
-    // Diálogo de bienvenida
-    const welcomeMessage = "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?";
-    appendBotMessage(welcomeMessage);
-
-    sendButton.addEventListener('click', function () {
-        const userMessage = userInput.value.trim();
-        if (userMessage !== '') {
-            appendUserMessage(userMessage);
-            processUserMessage(userMessage);
-            userInput.value = '';
-        }
-    });
-
-    function appendBotMessage(message) {
-        const botMessage = document.createElement('div');
-        botMessage.classList.add('chat-message', 'bot');
-        botMessage.textContent = message;
-        chatBox.appendChild(botMessage);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function appendUserMessage(message) {
-        const userMessage = document.createElement('div');
-        userMessage.classList.add('chat-message', 'user');
-        userMessage.textContent = message;
-        chatBox.appendChild(userMessage);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function processUserMessage(message) {
-        // Lista de palabras clave y respuestas específicas
-        const keywords = {
-            // Agrega aquí tus palabras clave y respuestas
-             "hola":"hola cómo estás?",
+document.addEventListener('DOMContentLoaded', function() {
+    // Espacio para las keywords y respuestas para el chat bot
+    const keywords = {
+                "hola":"hola cómo estás?",
           "bien":"comencemos con las preguntas",
           "ingeniería": "La ingeniería es una disciplina que aplica principios científicos y matemáticos para resolver problemas y diseñar soluciones.",
             "especialidades": "Existen muchas especialidades en ingeniería, como civil, industrial, informática, geología, minería y más.",
@@ -102,8 +66,23 @@ document.addEventListener('DOMContentLoaded', function () {
             "ingeniería nuclear": "La ingeniería nuclear se ocupa de la energía nuclear y sus aplicaciones en medicina e industria.",
             "ingeniería petrolera": "La ingeniería petrolera se enfoca en la exploración y producción de petróleo y gas natural."
 
-        };
+    };
 
+    const chatBox = document.getElementById('chat-box');
+    const userInput = document.getElementById('user-input');
+    const sendButton = document.getElementById('send-button');
+
+    // Función para mostrar mensajes del bot
+    function appendBotMessage(message) {
+        const botMessage = document.createElement('div');
+        botMessage.classList.add('chat-message', 'bot');
+        botMessage.textContent = message;
+        chatBox.appendChild(botMessage);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Función para procesar mensajes del usuario
+    function processUserMessage(message) {
         // Busca si el mensaje del usuario contiene una palabra clave y proporciona la respuesta correspondiente
         for (const keyword in keywords) {
             if (message.toLowerCase().includes(keyword)) {
@@ -116,14 +95,28 @@ document.addEventListener('DOMContentLoaded', function () {
         appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
     }
 
-    function openQuiz() {
-        const quizUrl = quizUrlInput.value.trim();
-        if (quizUrl !== '') {
-            // Abre el cuestionario en una nueva ventana
-            window.open(quizUrl, '_blank');
-        } else {
-            alert('Por favor, ingrese el URL del cuestionario.');
+    // Diálogo de bienvenida
+    const welcomeMessage = "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?";
+    appendBotMessage(welcomeMessage);
+
+    sendButton.addEventListener('click', function() {
+        const userMessage = userInput.value.trim();
+        if (userMessage !== '') {
+            appendUserMessage(userMessage);
+            processUserMessage(userMessage);
+            userInput.value = '';
         }
+    });
+
+    // Función para mostrar mensajes del usuario
+    function appendUserMessage(message) {
+        const userMessage = document.createElement('div');
+        userMessage.classList.add('chat-message', 'user');
+        userMessage.textContent = message;
+        chatBox.appendChild(userMessage);
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
+
 });
+
 
