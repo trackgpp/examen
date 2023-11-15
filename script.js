@@ -1,13 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
+    const quizUrlInput = document.getElementById('quiz-url');
 
     // Diálogo de bienvenida
     const welcomeMessage = "¡Hola! Soy Vocatech, tu asistente para explorar las especialidades de ingeniería. ¿En qué puedo ayudarte hoy?";
     appendBotMessage(welcomeMessage);
 
-    sendButton.addEventListener('click', function() {
+    sendButton.addEventListener('click', function () {
         const userMessage = userInput.value.trim();
         if (userMessage !== '') {
             appendUserMessage(userMessage);
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function processUserMessage(message) {
         // Lista de palabras clave y respuestas específicas
         const keywords = {
-                     "hola":"hola cómo estás?",
+            // Agrega aquí tus palabras clave y respuestas
+             "hola":"hola cómo estás?",
           "bien":"comencemos con las preguntas",
           "ingeniería": "La ingeniería es una disciplina que aplica principios científicos y matemáticos para resolver problemas y diseñar soluciones.",
             "especialidades": "Existen muchas especialidades en ingeniería, como civil, industrial, informática, geología, minería y más.",
@@ -99,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
             "ingeniería de minas": "La ingeniería de minas se dedica a la extracción y procesamiento de minerales y recursos naturales.",
             "ingeniería nuclear": "La ingeniería nuclear se ocupa de la energía nuclear y sus aplicaciones en medicina e industria.",
             "ingeniería petrolera": "La ingeniería petrolera se enfoca en la exploración y producción de petróleo y gas natural."
-        
 
         };
 
@@ -113,6 +114,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Respuesta genérica si no se encuentra una palabra clave.
         appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
+    }
+
+    function openQuiz() {
+        const quizUrl = quizUrlInput.value.trim();
+        if (quizUrl !== '') {
+            // Abre el cuestionario en una nueva ventana
+            window.open(quizUrl, '_blank');
+        } else {
+            alert('Por favor, ingrese el URL del cuestionario.');
+        }
     }
 });
 
