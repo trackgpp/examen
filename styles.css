@@ -1,47 +1,4 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e6f7ff; /* Fondo de la página */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Espacio entre la frase y las actividades */
-}
-
-.header {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.activities-container {
-    display: flex;
-    gap: 20px;
-}
-
-.activity {
-    background-color: #fff;
-    border: 2px solid #3498db; /* Borde azul */
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.chat-container, .video-container, .quiz-container {
-    padding: 20px; /* Espaciado interno */
-    color: #333; /* Color del texto en las actividades */
-}
-
-.chat-container {
-    background-color: #3498db;
-    color: #fff;
-}
+/* Tu CSS existente aquí */
 
 .chat-message {
     margin: 5px 0;
@@ -56,8 +13,8 @@ body {
 }
 
 .bot {
-    background-color: #66bb6a; /* Verde vibrante */
-    color: #fff;
+    background-color: #a5d2f2;
+    color: #333;
     align-self: flex-start;
 }
 
@@ -83,13 +40,4 @@ body {
     margin-left: 5px;
 }
 
-.video-container,
-.quiz-container {
-    flex: 1; /* Se expanden para llenar el espacio disponible */
-}
-
-/* Estilos adicionales para el texto de bienvenida */
-.welcome-text {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+/* Resto del código CSS permanece igual */
