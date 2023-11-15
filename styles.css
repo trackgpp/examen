@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
@@ -38,8 +38,8 @@ body {
 }
 
 .bot {
-    background-color: #a5d2f2;
-    color: #333;
+    background-color: #66bb6a; /* Verde vibrante */
+    color: #fff;
     align-self: flex-start;
 }
 
@@ -65,12 +65,19 @@ body {
     margin-left: 5px;
 }
 
-/* Resto del código CSS permanece igual */
-
+/* Nuevos estilos para el video y el cuestionario */
 .video-container {
     margin: 20px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .quiz-container {
     margin: 20px 0;
+    background-color: #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
 }
+
