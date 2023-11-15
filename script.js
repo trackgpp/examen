@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function processUserMessage(message) {
         // Lista de palabras clave y respuestas específicas
         const keywords = {
-           "hola":"hola cómo estás?",
+                     "hola":"hola cómo estás?",
           "bien":"comencemos con las preguntas",
           "ingeniería": "La ingeniería es una disciplina que aplica principios científicos y matemáticos para resolver problemas y diseñar soluciones.",
             "especialidades": "Existen muchas especialidades en ingeniería, como civil, industrial, informática, geología, minería y más.",
@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "ingeniería de minas": "La ingeniería de minas se dedica a la extracción y procesamiento de minerales y recursos naturales.",
             "ingeniería nuclear": "La ingeniería nuclear se ocupa de la energía nuclear y sus aplicaciones en medicina e industria.",
             "ingeniería petrolera": "La ingeniería petrolera se enfoca en la exploración y producción de petróleo y gas natural."
+        
 
         };
 
@@ -114,3 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
         appendBotMessage('Lo siento, no entiendo. ¿Puedes reformular tu pregunta o elegir una palabra clave de la lista?');
     }
 });
+
