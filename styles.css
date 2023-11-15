@@ -1,44 +1,109 @@
-/* El resto del CSS permanece igual */
-
-.video-container {
-    background-color: #3498db;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 800px;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-}
-
-.quiz-container {
-    background-color: #e74c3c;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 800px;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-}
-
-.quiz-container form {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-container,
+.quiz-container,
 .chat-container {
-    background-color: #2ecc71;
+    background-color: #3498db;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 800px;
     max-width: 100%;
-    margin: 20px auto;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 20px;
     color: #fff;
-    text-align: center;
+}
+
+/* Ajuste de estilos para centrar el título y subtítulo */
+.video-container,
+.quiz-container,
+.chat-container {
+    margin: 20px auto;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #fff;
+    color: #333;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #a5d2f2;
+    color: #333;
+    align-self: flex-start;
+}
+
+.user-input-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.user-input {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #3498db;
+}
+
+.send-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Resto del código CSS permanece igual */
+
+/* Estilos adicionales para el cuestionario */
+#quiz-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#quiz-form label {
+    margin-bottom: 5px;
+}
+
+#quiz-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #3498db;
+}
+
+#quiz-form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
 }
 
